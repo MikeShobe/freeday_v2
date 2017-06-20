@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import './App.css';
+import './CSS/App.css';
+import Header from './Header';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Welcome to Freeday</h2>
+      <MuiThemeProvider>
+        <div className="App">
+          <Header />
         </div>
-      </div>
+      </MuiThemeProvider>
     );
   }
 }
